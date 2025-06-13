@@ -1,1 +1,18 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(0, INPUT);
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+  if (digitalRead(0) <= 50) {
+    noTone(2);
+  } else {
+    tone(2, 3103738174, 1000); // play tone 330 (F#27 = 3103738174 Hz)
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
 
