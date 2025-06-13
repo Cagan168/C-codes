@@ -1,47 +1,14 @@
 // C++ code
 //
-#include <Adafruit_LiquidCrystal.h>
-
-Adafruit_LiquidCrystal lcd_1(0);
-
 void setup()
 {
-  lcd_1.begin(16, 2);
-  pinMode(8, INPUT);
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(9, INPUT);
-  pinMode(10, INPUT);
-
-  lcd_1.print("LAMBALAR KAPALI");
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop()
 {
-  if (digitalRead(8) == 1) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
-    lcd_1.clear();
-    lcd_1.print("KIRMIZI ACIK");
-  } else {
-    if (digitalRead(9) == 1) {
-      digitalWrite(2, LOW);
-      digitalWrite(3, HIGH);
-      digitalWrite(4, LOW);
-      lcd_1.clear();
-      lcd_1.print("MAVi ACIK");
-    } else {
-      if (digitalRead(10) == 1) {
-        digitalWrite(2, LOW);
-        digitalWrite(3, LOW);
-        digitalWrite(4, HIGH);
-        lcd_1.clear();
-        lcd_1.print("YESiL ACIK");
-      } else {
-      }
-    }
-  }
-  delay(10); // Delay a little bit to improve simulation performance
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
 }
