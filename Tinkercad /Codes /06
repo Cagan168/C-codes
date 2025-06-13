@@ -1,1 +1,26 @@
+// C++ code
+//
+#include <Servo.h>
 
+int potansiyometre = 0;
+
+int pot2 = 0;
+
+Servo servo_5;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(3, OUTPUT);
+  pinMode(A1, INPUT);
+  servo_5.attach(5, 500, 2500);
+}
+
+void loop()
+{
+  potansiyometre = analogRead(A0);
+  analogWrite(3, map(potansiyometre, 0, 1023, 0, 255));
+  pot2 = analogRead(A1);
+  servo_5.write(map(pot2, 0, 1023, 0, 180));
+  delay(10); // Delay a little bit to improve simulation performance
+}
