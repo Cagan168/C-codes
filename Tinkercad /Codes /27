@@ -1,1 +1,21 @@
+// C++ code
+//
+int A = 2;
+int b = 3;
+int c = 4;
+int d = 5;
+int e = 8;
+int f = 9;
+int g = 7;
+int h = 6;
 
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
