@@ -1,1 +1,103 @@
+// C++ code
+//
+int counter;
 
+void setup()
+{
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  analogWrite(3, 50);
+  analogWrite(5, 0);
+  analogWrite(6, 0);
+  analogWrite(9, 0);
+  analogWrite(10, 0);
+  analogWrite(11, 0);
+  delay(90); // Wait for 90 millisecond(s)
+  analogWrite(3, 100);
+  analogWrite(5, 50);
+  analogWrite(6, 0);
+  analogWrite(9, 0);
+  analogWrite(10, 0);
+  analogWrite(11, 0);
+  delay(90); // Wait for 90 millisecond(s)
+  analogWrite(3, 0);
+  analogWrite(5, 100);
+  analogWrite(6, 50);
+  analogWrite(9, 0);
+  analogWrite(10, 0);
+  analogWrite(11, 0);
+  delay(90); // Wait for 90 millisecond(s)
+  analogWrite(3, 0);
+  analogWrite(5, 0);
+  analogWrite(6, 100);
+  analogWrite(9, 50);
+  analogWrite(10, 0);
+  analogWrite(11, 0);
+  delay(90); // Wait for 90 millisecond(s)
+  analogWrite(3, 0);
+  analogWrite(5, 0);
+  analogWrite(6, 0);
+  analogWrite(9, 100);
+  analogWrite(10, 50);
+  analogWrite(11, 0);
+  delay(90); // Wait for 90 millisecond(s)
+  analogWrite(3, 0);
+  analogWrite(5, 0);
+  analogWrite(6, 0);
+  analogWrite(9, 0);
+  analogWrite(10, 100);
+  analogWrite(11, 50);
+  delay(90); // Wait for 90 millisecond(s)
+  for (counter = 0; counter < 1000000000000; ++counter) {
+    analogWrite(3, 50);
+    analogWrite(5, 0);
+    analogWrite(6, 0);
+    analogWrite(9, 0);
+    analogWrite(10, 0);
+    analogWrite(11, 50);
+    delay(90); // Wait for 90 millisecond(s)
+    analogWrite(3, 100);
+    analogWrite(5, 50);
+    analogWrite(6, 0);
+    analogWrite(9, 0);
+    analogWrite(10, 0);
+    analogWrite(11, 0);
+    delay(90); // Wait for 90 millisecond(s)
+    analogWrite(3, 0);
+    analogWrite(5, 100);
+    analogWrite(6, 50);
+    analogWrite(9, 0);
+    analogWrite(10, 0);
+    analogWrite(11, 0);
+    delay(90); // Wait for 90 millisecond(s)
+    analogWrite(3, 0);
+    analogWrite(5, 0);
+    analogWrite(6, 100);
+    analogWrite(9, 50);
+    analogWrite(10, 0);
+    analogWrite(11, 0);
+    delay(90); // Wait for 90 millisecond(s)
+    analogWrite(3, 0);
+    analogWrite(5, 0);
+    analogWrite(6, 0);
+    analogWrite(9, 100);
+    analogWrite(10, 50);
+    analogWrite(11, 0);
+    delay(90); // Wait for 90 millisecond(s)
+    analogWrite(3, 0);
+    analogWrite(5, 0);
+    analogWrite(6, 0);
+    analogWrite(9, 0);
+    analogWrite(10, 100);
+    analogWrite(11, 50);
+    delay(90); // Wait for 90 millisecond(s)
+  }
+}
