@@ -1,1 +1,28 @@
+// C++ code
+//
+int nem = 0;
 
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+
+void loop()
+{
+  nem = analogRead(A0);
+  Serial.println(nem);
+  if (nem < 438) {
+    digitalWrite(2, LOW);
+    digitalWrite(3, HIGH);
+    tone(4, 9853754486, 1000); // play tone 350 (D29 = 9853754486 Hz)
+  } else {
+    digitalWrite(2, HIGH);
+    digitalWrite(3, LOW);
+    noTone(4);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
